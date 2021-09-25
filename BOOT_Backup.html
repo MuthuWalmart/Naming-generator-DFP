@@ -1,0 +1,55 @@
+
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+  }
+  <script type="text/javascript">
+    function reply_click(name) {
+        document.getElementById("fullName").innerHTML = name;
+    }
+</script>
+</head>
+
+<body>
+  <div class="container">
+  <div class="justify-content-center">
+  <h1>DFP Naming Generator</h1>
+</div>
+</div>
+<br>
+<div  class="container" ng-app="" ng-init="fullname=[{firstname:'',lastname:''}]" > 
+
+<p><input type="text" class= "form-control"  placeholder="Advertiser" type="text" ng-model="fullname[0].firstname"></p>
+  <p><input type="text" class= "form-control" type="text" placeholder="campaign name" ng-model="fullname[0].lastname"> </p>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" name="_SRP" class="btn btn-primary" onclick="reply_click(this.name)">SRP</button>
+    <button type="button" name="_PDP" class="btn btn-primary" onclick="reply_click(this.name)">PDP</button>
+    <button type="button" name="_SP" class="btn btn-primary" onclick="reply_click(this.name)">SP</button>
+    <button type="button" name="_PDPSP" class="btn btn-primary" onclick="reply_click(this.name)">PDPSP</button>
+    <button type="button" name="_IP" class="btn btn-primary" onclick="reply_click(this.name)">IP</button>
+    <button type="button" name="_CP" class="btn btn-primary" onclick="reply_click(this.name)">CP</button>
+    <button type="button" name="_PP" class="btn btn-primary" onclick="reply_click(this.name)">PP</button>
+    <button type="button" name="_CPP" class="btn btn-primary" onclick="reply_click(this.name)">CPP</button>
+</div>
+<br>
+  <br>
+  <p><input type="text" class= "form-control" type="text" placeholder="Creative identification" ng-model="fullname[0].Identification"> </p>
+  <p><input type="int" class= "form-control" type="text" placeholder="Lineitem ID" ng-model="fullname[0].ID"> </p>
+  <br>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_LR<span id="fullName"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_RR<span id="fullName1"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_SKY<span id="fullName2"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_MQ<span id="fullName3"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_EXP<span id="fullName"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_MQ APP<span id="fullName"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_EXP APP<span id="fullName"></span></h5>
+<h5>{{ fullname[0].firstname }}_{{fullname[0].lastname}}{{fullname[0].buttons}}_HPPOV APP<span id="fullName"></span></h5>
+</div>
+ 
+</body>
+</html>
